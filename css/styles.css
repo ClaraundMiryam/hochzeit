@@ -11322,3 +11322,7 @@ body {
   background-color: #eaeaea;
   color: #3b4687;
 }
+
+#option-1, #option-2 {
+  display: none;
+}

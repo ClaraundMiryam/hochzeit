@@ -1,64 +1,33 @@
-var bool_vp = true;
+// var bool_vp = true;
 
-document.getElementById('passwordForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+var lang = "it";
 
+var stay_family = document.getElementById('option-1');
+var stay_friends = document.getElementById('option-2');
+
+function openSite(lang) {
     var password = document.getElementById('password').value;
-    var errorMessage = document.getElementById('errorMessage');
+    var url = "";
 
-    var pw_sect = document.getElementById('pwform');
-    var main_content = document.getElementById('content');
-
-    var stay_family = document.getElementById('option-1');
-    var stay_friends = document.getElementById('option-2');
-
-    var pickup_point = document.getElementById('pickup-point');
-
-    // Nascondi tutti i contenuti e il messaggio di errore
-    main_content.style.display = 'none';
-    errorMessage.style.display = 'none';
-
-    // Controlla la password e mostra il contenuto appropriato
     if (password === 'p1') { //clara-miry
-        main_content.style.display = 'block';
-        pw_sect.style.display = 'none';
-        pw_sect.classList.add('d-none');
-
-        stay_family.style.display = 'block';
-        stay_friends.style.display = 'none';
-
-        pickup_point.innerHTML = '<strong>Vi chiediamo di essere al luogo del vostro pernottamenento, Villa Prato, alle 16.30</strong>';
+        if (lang === 'de') {
+            url = "index-de.html?option=1";
+        } else if (lang === 'it') {
+            url = "index-it.html?option=1";
+        }
     } else if (password === 'p2') { //clara_miry
-        main_content.style.display = 'block';
-        pw_sect.style.display = 'none';
-        pw_sect.classList.add('d-none');
-
-        stay_family.style.display = 'none';
-        stay_friends.style.display = 'block';
-
-        bool_vp = false;
-
-        pickup_point.innerHTML = '<strong>Vi chiediamo di essere al luogo del vostro pernottamenento, Villa Castelletto, alle 16.30</strong>';
-    } 
-        else {
-        errorMessage.textContent = 'Password errata. Riprova.';
-        errorMessage.style.display = 'block';
+        if (lang === 'de') {
+            url = "index-de.html?option=2";
+        } else if (lang === 'it') {
+            url = "index-it.html?option=2";
+        }
+    } else {
+        document.getElementById('errorMessage').textContent = 'Falsches Passwort. Bitte versuchen Sie es erneut / Password errata. Riprova.';
+        document.getElementById('errorMessage').style.display = 'block';
+        return;
     }
 
-    // Resetta il campo della password
-    document.getElementById('passwordForm').reset();
-});
-
-function adjustIframeHeightToImage(carouselId, iframeContainerClass) {
-    // Seleziona l'immagine attiva nel carosello e il contenitore dell'iframe
-    const activeImage = document.querySelector(`${carouselId} .carousel-item.active img`);
-    const iframeContainer = document.querySelector(iframeContainerClass);
-  
-    if (activeImage && iframeContainer) {
-        // Ottieni l'altezza dell'immagine attiva e imposta quella del contenitore dell'iframe
-        const imageHeight = activeImage.offsetHeight;
-        iframeContainer.style.height = `${imageHeight}px`;
-    }
+    window.location.href = url;
 }
 
 // Link agli itinerari maps

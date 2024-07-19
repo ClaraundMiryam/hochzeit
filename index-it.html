@@ -35,12 +35,12 @@
             var option = params.get('option');
             var pickup_point = document.getElementById('pickup-point');
 
-            if (option === '1') {
+            if (option === 'b') {
                 document.getElementById('option-1').style.display = 'block';
                 document.getElementById('option-2').style.display = 'none';
                 pickup_point.innerHTML = '<strong>Vi chiediamo di essere al luogo del vostro pernottamento, Villa Prato, alle 16.30</strong>';
                 bool_vp = true;
-            } else if (option === '2') {
+            } else if (option === 'r') {
                 document.getElementById('option-1').style.display = 'none';
                 document.getElementById('option-2').style.display = 'block';
                 pickup_point.innerHTML = '<strong>Vi chiediamo di essere al luogo del vostro pernottamento, Villa Castelletto, alle 16.30</strong>';
@@ -87,7 +87,6 @@
                         <li class="nav-item"><a class="nav-link" href="#stay">Pernottamento</a></li>
                         <li class="nav-item"><a class="nav-link" href="#travel">Come raggiungerci</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contatti</a></li>
-                        <li class="nav-item" id="translateLink"><a class="nav-link">DE</a></li>
                     </ul>
                 </div>
             </div>
@@ -409,6 +408,11 @@
                                         <img class="d-block w-100"
                                             src="assets/img/villa-castelletto/villa-castelletto-7.jpg"
                                             alt="Seventh slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100"
+                                            src="assets/img/villa-castelletto/villa-castelletto-8.jpg"
+                                            alt="Eight slide">
                                     </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleControls2" role="button"

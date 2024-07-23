@@ -9,13 +9,13 @@ function openSite(lang) {
     var password = document.getElementById('password').value;
     var url = "";
 
-    if (password === 'clara.miryam') { //clara-miry
+    if (password === 'Clara.Miryam') { //clara-miry
         if (lang === 'de') {
             url = "index-de.html?option=b";
         } else if (lang === 'it') {
             url = "index-it.html?option=b";
         }
-    } else if (password === 'clara-miryam') { //clara_miry
+    } else if (password === 'Clara-Miryam') { //clara_miry
         if (lang === 'de') {
             url = "index-de.html?option=r";
         } else if (lang === 'it') {

@@ -11,15 +11,15 @@ function openSite(lang) {
 
     if (password === 'Clara.Miryam') { //clara-miry
         if (lang === 'de') {
-            url = "index-de.html?option=b";
+            url = "info-de.html?option=b";
         } else if (lang === 'it') {
-            url = "index-it.html?option=b";
+            url = "info-it.html?option=b";
         }
     } else if (password === 'Clara-Miryam') { //clara_miry
         if (lang === 'de') {
-            url = "index-de.html?option=r";
+            url = "info-de.html?option=r";
         } else if (lang === 'it') {
-            url = "index-it.html?option=r";
+            url = "info-it.html?option=r";
         }
     } else {
         document.getElementById('errorMessage').textContent = 'Falsches Passwort. Bitte versuchen Sie es erneut / Password errata. Riprova.';

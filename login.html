@@ -41,26 +41,16 @@
         .navbar-custom {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
+            height: 70px;
         }
 
-        @media only screen 
-            and (min-device-width : 414px) 
-            and (max-device-width : 736px)
-            and (device-width : 414px)
-            and (device-height : 736px)
-            and (orientation : portrait) 
-            and (-webkit-min-device-pixel-ratio : 3) 
-            and (-webkit-device-pixel-ratio : 3) {
-            
-                #pwform {
-                    height: fit-content; /* Adatta l'altezza al contenuto */
-                }
-
-                #pw-container {
-                    padding-top: 10rem; /* Aggiunto padding per centrare il contenuto */
-                }
-
-            }
+        #pwform {
+            height: fit-content; /* Adatta l'altezza al contenuto */
+            min-height: 100vh;
+        }
+        #pw-container {
+            padding-top: 200px; /* Aggiunto padding per centrare il contenuto */
+        }
 
     </style>
 </head>
@@ -103,9 +93,9 @@
                             <label for="password"></label>
                             <input type="password" class="form-control" id="password" aria-describedby="emailHelp"
                                 placeholder="Passwort" name="password" required>
-                            <small id="emailHelp" class="form-text text-muted my-3">Gib das Passwort ein, das auf deiner
+                            <small style="color: #F6EAF3" class="form-text my-3">Gib das Passwort ein, das auf deiner
                                 Einladung steht <br> </small>
-                            <small id="emailHelp" class="form-text text-muted my-3">Inserite la password riportata sul vostro invito</small>
+                            <small style="color: #F6EAF3" class="form-text my-3">Inserite la password riportata sul vostro invito</small>
                         </div>
                         <!-- <button type="submit" class="btn btn-primary btn-block"
                             style="margin-top: 2rem !important;">Einloggen</button> -->

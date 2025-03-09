@@ -43,6 +43,25 @@
             backdrop-filter: blur(10px);
         }
 
+        @media only screen 
+            and (min-device-width : 414px) 
+            and (max-device-width : 736px)
+            and (device-width : 414px)
+            and (device-height : 736px)
+            and (orientation : portrait) 
+            and (-webkit-min-device-pixel-ratio : 3) 
+            and (-webkit-device-pixel-ratio : 3) {
+            
+                #pwform {
+                    height: fit-content; /* Adatta l'altezza al contenuto */
+                }
+
+                #pw-container {
+                    padding-top: 10rem; /* Aggiunto padding per centrare il contenuto */
+                }
+
+            }
+
     </style>
 </head>
 
@@ -75,7 +94,7 @@
 
     <!-- Main Section -->
     <section class="access-form d-flex flex-column justify-content-center align-items-center flex-grow-1" id="pwform">
-        <div class="container">
+        <div class="container" id="pw-container">
             <div class="row justify-content-center align-items-center">
                 <h1 class="great-vibes-regular color-light-pink" style="font-size: 6em;">Clara - Miryam</h1>
                     <h2 class="mb-4 color-light-pink">Willkommen zu unserer Hochzeit / Benvenuti alla nostra festa di nozze</h2>
@@ -96,7 +115,7 @@
             <div class="row justify-content-center align-items-center">
                 <!-- Aggiunta align-items-center se necessario -->
                 <div class="col-lg-2 col-sm-0 text-center"></div>
-                <div class="col-lg-4 col-sm-12 text-center">
+                <div class="col-lg-4 col-sm-4 text-center">
                     <!-- Aggiunta text-center per centrare il contenuto delle card -->
                     <div class="card" style="width: 18rem; margin: auto;">
                         <!-- Aggiunto margin: auto per centrare le card -->
@@ -105,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-12 text-center">
+                <div class="col-lg-4 col-sm-4 text-center">
                     <!-- Ripetuto per la seconda card -->
                     <div class="card" style="width: 18rem; margin: auto;">
                         <!-- Aggiunto margin: auto per centrare le card -->

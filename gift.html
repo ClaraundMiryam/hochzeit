@@ -44,6 +44,25 @@
             backdrop-filter: blur(10px);
         }
 
+        @media only screen 
+            and (min-device-width : 414px) 
+            and (max-device-width : 736px)
+            and (device-width : 414px)
+            and (device-height : 736px)
+            and (orientation : portrait) 
+            and (-webkit-min-device-pixel-ratio : 3) 
+            and (-webkit-device-pixel-ratio : 3) {
+            
+                #pwform {
+                    height: fit-content; /* Adatta l'altezza al contenuto */
+                }
+
+                #pw-container {
+                    padding-top: 10rem; /* Aggiunto padding per centrare il contenuto */
+                }
+
+            }
+
     </style>
 </head>
 
@@ -76,7 +95,7 @@
 
     <!-- Main Section -->
     <section class="access-form d-flex flex-column justify-content-center align-items-center flex-grow-1" id="pwform">
-        <div class="container" style="margin-top: 2rem;">
+        <div class="container" id="pw-container">
             <div class="row justify-content-center align-items-center">
                 <h1 class="great-vibes-regular color-light-pink" style="font-size: 3em;">Regalaci un domani, uno di quelli in cui si incontrano tutti i nostri vorrei</h1>
 

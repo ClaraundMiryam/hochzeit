@@ -530,23 +530,26 @@
                 <div class="row gx-4 gx-lg-5 mb-3 justify-content-center text-center">
                     <h6><b>Da dove vuoi partire?</b></h6>
                     <div class="col-lg-6 col-md-12 justify-content-center">
-                        <select class="form-select mb-3" aria-label="Default select example" id="dep-loc-select">
-                        <option selected>Partenza</option>
-                        <option value="AL-FS">Alessandria. Stazione ferroviaria</option>
-                        <option value="MI-FS">Milano. Stazione centrale</option>
-                        <option value="MPX">Areoporto di Milano Malpensa (MPX) Terminal 1</option>
-                        <option value="LIN">Areoporto di Milano Linate (LIN)</option>
-                        <option value="BGY">Areoporto di Bergamo Orio al Serio (BGY)</option>
-                        <option value="TRN">Areoporto di Torino Caselle (TRN)</option>
-                        <option value="GOA">Aeroporto di Genova Cristoforo Colombo (GOA)</option>
-                      </select>
+                        <div class="input-group">
+                            <select class="form-select mb-3" aria-label="Default select example" id="dep-loc-select">
+                                <option selected>Partenza</option>
+                                <option value="AL-FS">Alessandria. Stazione ferroviaria</option>
+                                <option value="MI-FS">Milano. Stazione centrale</option>
+                                <option value="MPX">Areoporto di Milano Malpensa (MPX) Terminal 1</option>
+                                <option value="LIN">Areoporto di Milano Linate (LIN)</option>
+                                <option value="BGY">Areoporto di Bergamo Orio al Serio (BGY)</option>
+                                <option value="TRN">Areoporto di Torino Caselle (TRN)</option>
+                                <option value="GOA">Aeroporto di Genova Cristoforo Colombo (GOA)</option>
+                            </select>
+                            <span class="input-group-btn" style="margin-left: 2rem;">
+                                <button class="btn btn-primary btn-map" type="button" onclick="openMap(bool_vp);" tabindex="-1" style="padding-top: 0.8em; padding-bottom: 0.8em; padding-left: 1.5em; padding-right: 1.5em"> <i
+                                class="fa-solid fa-map-location-dot"></i></button>
+                        </div>
+
+                        <a class="btn btn-primary mt-3" style="font-weight: bold;" onclick="window.open('https://drive.google.com/file/d/1nEtPLH6pnL_LMS0BYU_JfwO2VMWEYBvv/view?usp=sharing', '_blank')">111 consigli per il tuo viaggio in Monferrato!</a>
+
                     </div>
                 </div>
-                <div class="row gx-4 gx-lg-5 mb-3 justify-content-center text-center">
-                    <div class="col-lg-6 col-md-12 justify-content-center">
-                        <button type="button" class="btn btn-outline-primary btn-map" onclick="openMap(bool_vp);"><i class="fa-solid fa-map-location-dot mr-2"></i>Vedi l'itinerario</button>
-                    </div>
-                </div> 
         </section>
 
         <!-- Footer-->

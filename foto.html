@@ -49,8 +49,63 @@
             height: fit-content; /* Adatta l'altezza al contenuto */
             min-height: 100vh;
         }
+
         #pw-container {
-            padding-top: 200px; /* Aggiunto padding per centrare il contenuto */
+            padding-top: 130px; /* Aggiunto padding per centrare il contenuto */
+        }
+
+
+        /* Retina/HiDPI */
+        @media (min-resolution: 2dppx) {
+            .bg-btn { background-image: url('icon@2x.png'); }
+        }
+        .bg-btn:focus-visible {
+            outline: 2px solid #005fcc; outline-offset: 2px; border-radius: 8px;
+        }
+
+        #miry-clara-photo {
+            width: 100%;
+            height: auto;
+        }
+
+        #miry-clara-photo:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            display: block;
+            transition: filter 0.4s ease;
+        }
+
+        /* testo sopra l'immagine */
+        .image-container .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            text-align: center;
+            pointer-events: none; /* così non blocca il click sul link */
+        }
+
+        /* effetto hover */
+        .image-container:hover img {
+            filter: brightness(60%);
+        }
+
+        .image-container:hover .overlay-text {
+            opacity: 1;
         }
 
     </style>
@@ -80,7 +135,6 @@
                 <li class="nav-item"><a class="nav-link" href="gift.html">Geschenk / Regalo</a></li>
                 <li class="nav-item"><a class="nav-link" href="foto.html">Fotografie / Fotos</a></li>
                 <li class="nav-item"><a class="nav-link" href="login.html">Kontakte / Contatti</a></li>
-            
             </ul>
         </div>
     </div>
@@ -89,33 +143,22 @@
     <section class="access-form d-flex flex-column justify-content-center align-items-center flex-grow-1" id="pwform">
         <div class="container" id="pw-container">
             <div class="row justify-content-center align-items-center">
-                <h1 class="great-vibes-regular color-light-pink" style="font-size: 3em;">Regalaci un domani, uno di quelli in cui si incontrano tutti i nostri vorrei</h1>
+                <h1 class="great-vibes-regular color-light-pink" style="font-size: 3em;">Piccoli ricordi di un giorno speciale</h1>
 
-                <h1 class="great-vibes-regular color-light-pink mt-4" style="font-size: 3em;">Schenke uns ein Morgen, an dem sich all unsere Wünsche begegnen mögen</h1>
+                <h1 class="great-vibes-regular color-light-pink mt-4" style="font-size: 3em;">Kleine Erinnerungen an einen besonderen Tag</h1>
                 
                 <div class="row justify-content-center align-items-center mt-5">
-                    <div class="col-4">
-                        <p class="d-inline-flex gap-1 text-center">
-                            <button class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center p-0" 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#collapseExample" 
-        aria-expanded="false" 
-        aria-controls="collapseExample" 
-        style="width: 3rem; height: 3rem;">
-    <i class="bi bi-gift-fill" style="font-size: 1.2rem;"></i>
-</button>
-
-                        </p>
-                    </div>
-                    <div class="collapse" id="collapseExample">
-                        <div class="card card-body" style="background-color: rgba(255, 255, 255, 0.9);"> 
-                            <p><b>Clara Kunzke, Miryam Veggi</b></p>
-                            <p>IBAN: DE90 2004 0000 0400 5906 01</p>
-                            <p>BIC: COBADEFFXXX</p>
-                        </div>
+                    <div class="col-lg-6 col-md-10 col-md-10 image-container">
+                        <a href="https://drive.google.com/drive/folders/17EcB7-bi7hUmzdwf4XMhrne7eZrC0FQL?usp=sharing">
+                            <img src="assets/img/miry-clara-photo.jpeg" alt="Clara & Miryam" id="miry-clara-photo" class="img-fluid">
+                            <div class="overlay-text">
+                                <i>Rivivi la nostra festa</i>
+                                <i>Erlebe unser Fest noch einmal</i>
+                            </div>
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
